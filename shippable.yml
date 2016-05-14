@@ -12,4 +12,4 @@ install:
 before_script:
   - meteor npm install
   - sudo npm -g install gagarin
-script: gagarin -v
+script: sudo gagarin -v
