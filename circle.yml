@@ -1,0 +1,22 @@
+# This is the configuration file for continuous integration of
+# your project in CircleCi.
+#
+# The full reference is available at :
+#             https://circleci.com/docs/configuration
+#
+machine:
+  node:
+    # Can't be certain that this build wlll work with all future versions: so specify.
+    version: 6.1.0
+
+dependencies:
+  cache_directories:
+    - ~/.meteor
+  override:
+    - meteor || curl https://install.meteor.com | /bin/sh
+    - meteor npm install
+    - npm install -g gagarin
+
+test:
+  override:
+    - gagarin -v

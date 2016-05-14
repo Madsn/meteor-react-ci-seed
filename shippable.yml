@@ -1,0 +1,15 @@
+build_image: shippableimages/ubuntu1404_nodejs
+language: node_js
+node_js:
+  - 4.2.3
+before_install:
+  - . /root/.nvm/nvm.sh
+  - nvm install 6.1.0
+  - nvm use 6.1.0
+  - node --version
+install:
+  - curl https://install.meteor.com/ | sh
+before_script:
+  - meteor npm install
+  - sudo npm -g install gagarin
+script: gagarin -v
