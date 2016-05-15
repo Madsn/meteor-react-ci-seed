@@ -22,6 +22,7 @@ build:
   # Read more about steps on our dev center:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
+    - taka-h/install-phantomjs@0.1.1
     - script:
         name: install meteor
         code: |
