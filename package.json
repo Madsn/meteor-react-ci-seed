@@ -12,6 +12,6 @@
     "react-dom": "^15.0.2"
   },
   "scripts": {
-    "test": "gagarin -v"
+    "test": "meteor test --once --driver-package dispatch:mocha-phantomjs"
   }
 }
