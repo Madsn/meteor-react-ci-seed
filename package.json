@@ -12,6 +12,7 @@
     "react-dom": "^15.0.2"
   },
   "scripts": {
-    "test": "meteor test --once --driver-package dispatch:mocha-phantomjs"
+    "test": "meteor test --once --driver-package dispatch:mocha-phantomjs",
+    "test-full-app": "meteor test --full-app --once --driver-package dispatch:mocha-phantomjs"
   }
 }
